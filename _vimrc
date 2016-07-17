@@ -192,6 +192,7 @@ set statusline=%<%f%h%m%r\ [%{&ff}]%=%03.3b\ 0x02.2B\ \ Ln:%l,Col%v\ %P\ [Lines=
 set cmdheight=2 "设置命令行的高度为2，默认为1
 set wildmenu
 set showmatch "高亮显示匹配的括号
+set showcmd "右下角显示当前敲的命令按键
 set history=500
 
 if (g:iswindows && g:isGUI)
@@ -232,6 +233,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用快捷映射配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader=","
 if (g:iswindows && g:isGUI)
 	unmap  <C-Y>
 	iunmap  <C-Y>
@@ -421,6 +423,15 @@ let g:javascript_plugin_flow = 1 "Enables syntax highlighting for Flow.
 "   'd'   called: find functions that function under cursor calls
 if has("cscope")
     set cscopequickfix=s-,c-,d-,i-,t-,e-
+    nnoremap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nnoremap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nnoremap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+    set notimeout
 endif
 
 
@@ -662,4 +673,5 @@ func! Run()
 endfunc
 
 
-cd D:\allwork\mt3_20160525_r47321\mt3\server\server\gate_server\gate\
+"cd D:\allwork\mt3_20160525_r47321\mt3\server\server\gate_server\gate\
+cd D:\repo4git\nginx-release-1.11.2\src
