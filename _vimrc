@@ -79,6 +79,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'chazy/cscope_maps'
+
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'fholgado/minibufexpl.vim'
@@ -398,6 +400,29 @@ let g:indentLine_color_term = 239
 let g:javascript_plugin_jsdoc = 1 "Enables syntax highlighting for JSDocs.
 let g:javascript_plugin_ngdoc = 1 "Enables some additional syntax highlighting for NGDocs. Requires JSDoc plugin to be enabled as well.
 let g:javascript_plugin_flow = 1 "Enables syntax highlighting for Flow.
+
+"cscope_maps
+"cs add F:\zzz\lighttpd-1.4.38\src\cscope.out
+"查找C语言符号，即查找函数名、宏、枚举值等出现的地方
+"   's'   symbol: find all references to the token under cursor
+"查找函数、宏、枚举等定义的位置，类似ctags所提供的功能
+"   'g'   global: find global definition(s) of the token under cursor
+"查找调用本函数的函数
+"   'c'   calls:  find all calls to the function name under cursor
+"查找指定的字符串
+"   't'   text:   find all instances of the text under cursor
+"查找egrep模式，相当于egrep功能，但查找速度快多了
+"   'e'   egrep:  egrep search for the word under cursor
+"查找并打开文件，类似vim的find功能
+"   'f'   file:   open the filename under cursor
+"查找包含本文件的文
+"   'i'   includes: find files that include the filename under cursor
+"查找本函数调用的函数
+"   'd'   called: find functions that function under cursor calls
+if has("cscope")
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+endif
+
 
 "DrawIt
 "ASCII art 风格
