@@ -456,8 +456,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 "设置转到定义处的快捷键为ALT + G，这个功能非常赞
 nmap <M-g> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR>
 
-"TEMP临时配置文件"
-
 
 " -----------------------------------------------------------------------------
 "  < 单文件编译、连接、运行配置 >
