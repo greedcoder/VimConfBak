@@ -1,0 +1,56 @@
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'chazy/cscope_maps'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'fholgado/minibufexpl.vim'
+
+Plugin 'jlanzarotta/bufexplorer'
+
+Plugin 'vim-scripts/a.vim'
+
+"Plugin 'file:///script_repo/taglist.vim'
+Plugin 'vim-scripts/taglist.vim'
+
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/phd'
+Plugin 'tomasr/molokai'
+
+Plugin 'Lokaltog/vim-powerline'
+
+Plugin 'jiangmiao/auto-pairs'
+
+Plugin 'scrooloose/nerdcommenter'
+
+Plugin 'majutsushi/tagbar'
+
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'derekwyatt/vim-protodef'
+Plugin 'kien/rainbow_parentheses.vim'
+
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+Plugin 'Yggdroot/indentLine'
+
+Plugin 'tpope/vim-surround'
+
+Plugin 'pangloss/vim-javascript'
+
+Plugin 'hdima/python-syntax'
+
+"Plugin 'rkulla/pydiction'  "tab冲突
+
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown' "The tabular plugin must come before vim-markdown.
+
+"Plugin 'fatih/vim-go' "有二进制文件未安装
+
+Plugin 'vim-scripts/DrawIt'

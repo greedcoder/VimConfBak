@@ -74,62 +74,10 @@ filetype off "禁用文件类型侦测
 set rtp+=$VIM/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$VIM/vimfiles/bundle/')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'Valloric/YouCompleteMe'
-
-Plugin 'chazy/cscope_maps'
-
-Plugin 'scrooloose/nerdtree'
-
-Plugin 'fholgado/minibufexpl.vim'
-
-Plugin 'jlanzarotta/bufexplorer'
-
-Plugin 'vim-scripts/a.vim'
-
-"Plugin 'file:///script_repo/taglist.vim'
-Plugin 'vim-scripts/taglist.vim'
-
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-scripts/phd'
-Plugin 'tomasr/molokai'
-
-Plugin 'Lokaltog/vim-powerline'
-
-Plugin 'jiangmiao/auto-pairs'
-
-Plugin 'scrooloose/nerdcommenter'
-
-Plugin 'majutsushi/tagbar'
-
-Plugin 'kien/ctrlp.vim'
-
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'derekwyatt/vim-protodef'
-Plugin 'kien/rainbow_parentheses.vim'
-
-Plugin 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
-
-Plugin 'Yggdroot/indentLine'
-
-Plugin 'tpope/vim-surround'
-
-Plugin 'pangloss/vim-javascript'
-
-Plugin 'hdima/python-syntax'
-
-"Plugin 'rkulla/pydiction'  "tab冲突
-
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown' "The tabular plugin must come before vim-markdown.
-
-"Plugin 'fatih/vim-go' "有二进制文件未安装
-
-Plugin 'vim-scripts/DrawIt'
+"插件加载外部独立vim配置文件,方便调试
+if filereadable(expand($VIM . "/vimrc.bundle"))
+    source $VIM/vimrc.bundle
+endif
 
 call vundle#end()
 filetype plugin indent on "启用文件类型检测,加载文件类型相关插件,使用该类型文件缩进
@@ -201,6 +149,7 @@ set statusline=%<%f%h%m%r\ [%{&ff}]%=%03.3b\ 0x02.2B\ \ Ln:%l,Col%v\ %P\ [Lines=
 set cmdheight=2 "设置命令行的高度为2，默认为1
 set wildmenu
 set showmatch "高亮显示匹配的括号
+set ruler "显示当前行号列号
 set showcmd "右下角显示当前敲的命令按键
 set history=500
 
@@ -488,11 +437,13 @@ let g:ycm_global_ycm_extra_conf = $VIM . '\.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 "补全功能在注释中同样有效 
 let g:ycm_complete_in_comments = 1
-"从第一个键入字符就开始罗列匹配项 
+"从第一个键入字符就开始罗列匹配项
 let g:ycm_min_num_of_chars_for_completion = 1
+" 开启 YCM 基于标签引擎
+let g:ycm_collect_identifiers_from_tags_files=1
 "禁止缓存匹配项，每次都重新生成匹配项  
 let g:ycm_cache_omnifunc = 0
-" 语法关键字补全              
+" 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax = 1
 "补全内容不以分割子窗口形式出现，只显示补全列表
 set completeopt-=preview

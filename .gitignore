@@ -1,0 +1,8 @@
+vimfiles
+vim74/*
+!vim74/cscope.exe
+!vim74/ctags.exe
+!vim74/curses2.dll
+!vim74/regex2.dll
+!vim74/vimtweak.dll
+*.pyc
