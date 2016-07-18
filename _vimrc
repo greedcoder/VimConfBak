@@ -120,6 +120,15 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'pangloss/vim-javascript'
 
+Plugin 'hdima/python-syntax'
+
+"Plugin 'rkulla/pydiction'  "tab冲突
+
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown' "The tabular plugin must come before vim-markdown.
+
+"Plugin 'fatih/vim-go' "有二进制文件未安装
+
 Plugin 'vim-scripts/DrawIt'
 
 call vundle#end()
@@ -431,9 +440,11 @@ if has("cscope")
     nnoremap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
     nnoremap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nnoremap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-    set notimeout
 endif
 
+"pydiction
+"let g:pydiction_location = $VIM . '\vimfiles\bundle\pydiction\complete-dict'
+"let g:pydiction_menu_height = 3
 
 "DrawIt
 "ASCII art 风格
