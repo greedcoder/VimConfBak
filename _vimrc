@@ -107,8 +107,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 文件编辑配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nobackup
-set noswapfile
+set nobackup "关闭自动备份文件
+set noswapfile "关闭交换文件
 set noundofile "关闭持久撤销功能
 "set undofile "持久撤销功能
 "set undodir=$VIM/vimfiles/\_undodir
@@ -191,7 +191,9 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用快捷映射配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"定义<Leader>键
 let mapleader=","
+
 if (g:iswindows && g:isGUI)
 	unmap  <C-Y>
 	iunmap  <C-Y>
@@ -397,7 +399,11 @@ endif
 
 "DrawIt
 "ASCII art 风格
-"常用操作就两个，:Distart，开始绘制，可用方向键绘制线条，空格键绘制或擦除字符；:Distop，停止绘制。
+"net say:常用操作就两个，:Distart，开始绘制，可用方向键绘制线条，空格键绘制或擦除字符；:Distop，停止绘制。
+"offical say:
+"\di to start DrawIt and
+"\ds to stop  DrawIt.
+"But actully \ is <leader> key!!!
 
 "vimtweak.dll
 if (g:iswindows && g:isGUI)
