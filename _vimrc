@@ -134,7 +134,7 @@ set shortmess=atI "去掉欢迎界面
 set number "显示行号，反之set nonumber
 set relativenumber "显示相对行号，反之set norelativenumber 
 nnoremap <silent> <C-N>    :set nu!<CR> "快捷键开关显示行号
-nnoremap <silent> <C-R>    :set relativenumber!<CR> "快捷键开关显示相对行号
+"nnoremap <silent> <C-R>    :set relativenumber!<CR> "快捷键开关显示相对行号 "ctrl-r和撤销回复冲突，暂时取消该快捷键"
 set cursorline "突出显示当前行
 set nowrap "设置不自动换行,禁止折行
 set laststatus=2 "启用状态栏信息
@@ -437,6 +437,8 @@ let g:ycm_global_ycm_extra_conf = $VIM . '\.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 "补全功能在注释中同样有效 
 let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1 " Completion in string
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
 "从第一个键入字符就开始罗列匹配项
 let g:ycm_min_num_of_chars_for_completion = 1
 " 开启 YCM 基于标签引擎
