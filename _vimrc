@@ -194,6 +194,16 @@ endif
 "定义<Leader>键
 let mapleader=","
 
+" 设置环境保存项
+set sessionoptions="blank,buffers,folds,globals,help,localoptions,options,resize,sesdir,slash,tabpages,unix,winpos,winsize"
+" 保存 undo 历史
+"set undodir=~/.undo_history/
+"set undofile   
+" 保存快捷键
+map <leader>ss :mksession! mysession.vim<cr> :wviminfo! my.viminfo<cr>
+" 恢复快捷键
+map <leader>rs :source mysession.vim<cr> :rviminfo my.viminfo<cr>
+
 if (g:iswindows && g:isGUI)
 	unmap  <C-Y>
 	iunmap  <C-Y>
