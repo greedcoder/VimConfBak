@@ -463,6 +463,10 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 nmap <M-g> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR>
 
 
+"使用autocmd根据当前缓冲的文件的类型或者语法的类型添加不同的map命令
+"autocmd FileType sometype nnoremap <buffer> <F5> :w<CR>:!somecompiler % <CR>
+"<F5>可以改成其他你想映射的键位，如<leader>r。"
+autocmd FileType python nnoremap <buffer> <leader>r :w<CR>:!python % <CR>
 " -----------------------------------------------------------------------------
 "  < 单文件编译、连接、运行配置 >
 " -----------------------------------------------------------------------------
