@@ -111,7 +111,7 @@ set nobackup "关闭自动备份文件
 set noswapfile "关闭交换文件
 set noundofile "关闭持久撤销功能
 "set undofile "持久撤销功能
-"set undodir=$VIM/vimfiles/\_undodir
+"set undodir=$VIM . "/vimfiles/\_undodir"
 "set undolevels=1000 "maximum number of changes that can be undone
 
 set autoread " 当文件在外部被修改，自动更新该文件
@@ -658,4 +658,4 @@ endfunc
 
 
 "cd D:\allwork\mt3_20160525_r47321\mt3\server\server\gate_server\gate\
-cd D:\repo4git\nginx-release-1.11.2\src
+"cd D:\repo4git\nginx-release-1.11.2\src
