@@ -82,6 +82,8 @@ endif
 call vundle#end()
 filetype plugin indent on "启用文件类型检测,加载文件类型相关插件,使用该类型文件缩进
 
+"set autochdir "自动切换当前目录为当前文件所在的目录
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 编码格式配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -92,6 +94,9 @@ set fileencodings=utf-8,ucs-bom,gbk,gb2312,cp936,latin-1    "设置文件打开�
 
 set fileformat=unix                              	"设置新文件的<EOL>换行符格式
 set fileformats=unix,dos,mac                      	"打开文件的<EOL>换行符格式类型
+
+":setf <filetype name>或:setfiletype <filetype name> 以指定的filetype name文件类型语法着色格式打开文件
+"如：setf cmake 或：setfiletype xml
 
 if (g:iswindows && g:isGUI)
 	"set langmenu=zh_CN
@@ -656,6 +661,5 @@ func! Run()
     endif
 endfunc
 
-
-"cd D:\allwork\mt3_20160525_r47321\mt3\server\server\gate_server\gate\
 "cd D:\repo4git\nginx-release-1.11.2\src
+"cd D:\repo4git\

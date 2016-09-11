@@ -53,4 +53,6 @@ Plugin 'plasticboy/vim-markdown' "The tabular plugin must come before vim-markdo
 
 "Plugin 'fatih/vim-go' "有二进制文件未安装
 
+Plugin 'pboettch/vim-cmake-syntax'
+
 Plugin 'vim-scripts/DrawIt'
